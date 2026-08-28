@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ccmqpq52073xb"]
+
+[ext_resource type="PackedScene" uid="uid://br6l2oi78ept5" path="res://mob/bat/bat_model.glb" id="1_kteab"]
+
+[node name="RigidBody3D" type="RigidBody3D" unique_id=1460103992]
+
+[node name="bat_model" parent="." unique_id=235299827 instance=ExtResource("1_kteab")]

@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://kfmjixpe0uy"]
+
+[ext_resource type="PackedScene" uid="uid://dlk3bxrivjien" path="res://player/simple_gun/gun_model.glb" id="1_oul6g"]
+[ext_resource type="Script" uid="uid://c628ntly1g01l" path="res://player/player.gd" id="1_rkbax"]
+[ext_resource type="PackedScene" uid="uid://85xeh5bnjldj" path="res://OBJ format/green_goblins_glider.glb" id="3_g1dw6"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2fyty"]
+
+[node name="Player" type="CharacterBody3D" unique_id=1785153723]
+script = ExtResource("1_rkbax")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=433117135]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_2fyty")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2084841751]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1192126, 0.080041885)
+
+[node name="gun_model" parent="Camera3D" unique_id=1402909219 instance=ExtResource("1_oul6g")]
+unique_name_in_owner = true
+transform = Transform3D(-0.47552007, 0, 0.0005104011, 0, 0.4905803, 0, -0.0005000159, 0, -0.4853966, 0.542892, -0.272956, -0.59693706)
+
+[node name="Marker3D" type="Marker3D" parent="Camera3D" unique_id=1131859726]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.54599047, -0.25128752, -0.9336632)
+
+[node name="Timer" type="Timer" parent="." unique_id=2013024184]
+unique_name_in_owner = true
+wait_time = 0.223
+one_shot = true
+
+[node name="Sketchfab_Scene" parent="." unique_id=120201592 instance=ExtResource("3_g1dw6")]
+transform = Transform3D(-0.03535551, -0.045019444, 0.9983602, 0.033548772, 0.9983688, 0.04620791, -0.99881166, 0.035127442, -0.03378744, 0.8133564, 0.0521425, -0.27226865)
